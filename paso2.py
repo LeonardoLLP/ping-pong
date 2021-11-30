@@ -35,4 +35,7 @@ class PelotaPong:
     def mover(self):
         self.x += self.dir_x
         self.y += self.dir_y
+def main():
+    # Inicialización de Pygame
+    pygame.init()
 
