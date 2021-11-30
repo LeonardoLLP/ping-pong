@@ -15,3 +15,7 @@ VENTANA_VERT = 600
 FPS = 60  
 # Color del fondo de la ventana (RGB)
 BLANCO = (255, 255, 255)  
+
+class PelotaPong:
+    def __init__(self, fichero_imagen):
+        # --- Atributos de la Clase ---
