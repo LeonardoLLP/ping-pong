@@ -41,3 +41,7 @@ raqueta_1.x = 60
 
 raqueta_2 = RaquetaPong()
 raqueta_2.x = VENTANA_HORI - 60 - raqueta_2.ancho
+
+#Dibujar las raquetas
+ventana.blit(raqueta_1.imagen, (raqueta_1.x, raqueta_1.y))
+ventana.blit(raqueta_2.imagen, (raqueta_2.x, raqueta_2.y))
