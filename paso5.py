@@ -64,4 +64,8 @@ class RaquetaPong:
         # Dimensiones de la Raqueta
         self.ancho, self.alto = self.imagen.get_size()
 
-
+        # Posición de la Raqueta
+        self.x = 0
+        self.y = VENTANA_VERT / 2 - self.alto / 2
+        
+        
