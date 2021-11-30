@@ -44,6 +44,9 @@ def main():
     pygame.display.set_caption("Pong 2")
     
     pelota = PelotaPong("bola_roja.png")
+    
+    # Bucle principal
+    jugando = True
 
 
 
