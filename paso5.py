@@ -73,3 +73,7 @@ class RaquetaPong:
         
     def mover(self):
         self.y += self.dir_y   
+        
+def main():
+    # Inicialización de Pygame
+    pygame.init()
