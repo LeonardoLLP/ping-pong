@@ -42,5 +42,11 @@ def main():
     # Inicialización de la superficie de dibujo (display surface)
     ventana = pygame.display.set_mode((VENTANA_HORI, VENTANA_VERT))
     pygame.display.set_caption("Pong 2")
+    
+    pelota = PelotaPong("bola_roja.png")
+    
+    # Bucle principal
+    jugando = True
+
 
 
