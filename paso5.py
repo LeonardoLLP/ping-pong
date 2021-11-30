@@ -22,3 +22,6 @@ class PelotaPong:
        
         # Imagen de la Pelota
         self.imagen = pygame.image.load(fichero_imagen).convert_alpha()
+        
+        # Dimensiones de la Pelota
+        self.ancho, self.alto = self.imagen.get_size()
