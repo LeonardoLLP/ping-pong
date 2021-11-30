@@ -60,3 +60,8 @@ class RaquetaPong:
         self.imagen = pygame.image.load("raqueta.png").convert_alpha()
 
         # --- Atributos de la Clase ---
+        
+        # Dimensiones de la Raqueta
+        self.ancho, self.alto = self.imagen.get_size()
+
+
