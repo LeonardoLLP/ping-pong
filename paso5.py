@@ -68,4 +68,7 @@ class RaquetaPong:
         self.x = 0
         self.y = VENTANA_VERT / 2 - self.alto / 2
         
+        # Dirección de movimiento de la Raqueta
+        self.dir_y = 0
+        
         
