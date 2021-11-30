@@ -59,6 +59,11 @@ def main():
 
         pygame.display.flip()
         pygame.time.Clock().tick(FPS)
+    pygame.quit()
+
+
+if __name__ == "__main__":
+    main()
 
 
 
