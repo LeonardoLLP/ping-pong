@@ -25,3 +25,9 @@ class PelotaPong:
         
         # Dimensiones de la Pelota
         self.ancho, self.alto = self.imagen.get_size()
+        
+        # Posición de la Pelota
+        self.x = VENTANA_HORI / 2 - self.ancho / 2
+        self.y = VENTANA_VERT / 2 - self.alto / 2
+        
+        
