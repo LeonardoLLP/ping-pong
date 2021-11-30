@@ -47,6 +47,25 @@ def main():
     
     # Bucle principal
     jugando = True
+    while jugando:
+        pelota.mover()
+
+        #Dibujamos la pelota en su posición en la ventana.
+        ventana.fill(BLANCO)
+        ventana.blit(pelota.imagen, (pelota.x, pelota.y))
+
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                jugando = False
+
+        pygame.display.flip()
+        pygame.time.Clock().tick(FPS)
+    pygame.quit()
+
+
+if __name__ == "__main__":
+    main()
+
 
 
 
