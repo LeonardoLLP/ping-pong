@@ -24,6 +24,10 @@ class PelotaPong:
     def mover(self):
         self.x += self.dir_x
         self.y += self.dir_y
+    
+#Creación de la pelota
+    pelota = PelotaPong("bola_roja.png")
+
 
 
 
