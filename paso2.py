@@ -50,6 +50,7 @@ def main():
     while jugando:
         pelota.mover()
 
+        #Dibujamos la pelota en su posición en la ventana.
         ventana.fill(BLANCO)
         ventana.blit(pelota.imagen, (pelota.x, pelota.y))
 
