@@ -30,3 +30,7 @@ class RaquetaPong:
         
 #Posición de la raqueta, que solo se desplaza verticalmente
         self.dir_y = 0
+
+#Definimos el movimiento de la raqueta
+    def mover(self):
+        self.y += self.dir_y
