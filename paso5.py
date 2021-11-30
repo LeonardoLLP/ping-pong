@@ -27,3 +27,6 @@ class RaquetaPong:
 #Posiciones de la imagen
         self.x = 0
         self.y = VENTANA_VERT / 2 - self.alto / 2
+        
+#Posición de la raqueta, que solo se desplaza verticalmente
+        self.dir_y = 0
