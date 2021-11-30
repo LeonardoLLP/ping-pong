@@ -1,6 +1,8 @@
 # Al paso 1 hay que añadirle lo siguiente:
 #Importamos los módulos
 import random
+import pygame
+import variables
 
 #Definimos la Clase PelotaPong y sus atributos
 class PelotaPong:
@@ -14,8 +16,8 @@ class PelotaPong:
         self.ancho, self.alto = self.imagen.get_size()
 
         # Posición de la Pelota
-        self.x = VENTANA_HORI / 2 - self.ancho / 2
-        self.y = VENTANA_VERT / 2 - self.alto / 2
+        self.x = variables.VENTANA_HORI / 2 - self.ancho / 2
+        self.y = variables.VENTANA_VERT / 2 - self.alto / 2
 
         # Dirección de movimiento de la Pelota
         self.dir_x = random.choice([-5, 5])
@@ -26,13 +28,13 @@ class PelotaPong:
         self.y += self.dir_y
 
 #Creación de la pelota
-    pelota = PelotaPong("bola_roja.png")
+pelota = PelotaPong("bola_roja.png")
 
 #Modificar la posición de la pelota
-    pelota.mover()
+pelota.mover()
 
 #Dibujar la pelota en su posicion en la ventana
-    ventana.blit(pelota.imagen, (pelota.x, pelota.y))
+variables.ventana.blit(pelota.imagen, (pelota.x, pelota.y))
 
 
 
