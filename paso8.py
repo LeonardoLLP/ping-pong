@@ -21,3 +21,8 @@ def golpear_ia(self, pelota):
             pelota.dir_x = -pelota.dir_x
             pelota.x = self.x - pelota.ancho
             
+#Para mover la raqueta y detectar el golpe de la pelota mediante un bucle principal
+        raqueta_1.mover()
+        raqueta_2.mover_ia(pelota)
+        raqueta_1.golpear(pelota)
+        raqueta_2.golpear_ia(pelota)
