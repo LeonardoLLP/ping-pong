@@ -23,3 +23,7 @@ class RaquetaPong:
     def __init__(self):
         self.imagen = pygame.image.load("raqueta.png").convert_a
         self.ancho, self.alto = self.imagen.get_size()
+        
+#Posiciones de la imagen
+        self.x = 0
+        self.y = VENTANA_VERT / 2 - self.alto / 2
