@@ -71,4 +71,5 @@ class RaquetaPong:
         # Dirección de movimiento de la Raqueta
         self.dir_y = 0
         
-        
+    def mover(self):
+        self.y += self.dir_y   
