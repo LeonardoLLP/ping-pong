@@ -30,4 +30,8 @@ class PelotaPong:
         self.x = VENTANA_HORI / 2 - self.ancho / 2
         self.y = VENTANA_VERT / 2 - self.alto / 2
         
+        # Dirección de movimiento de la Pelota
+        self.dir_x = random.choice([-5, 5])
+        self.dir_y = random.choice([-5, 5])
+        
         
