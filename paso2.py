@@ -28,6 +28,10 @@ class PelotaPong:
 #Creación de la pelota
     pelota = PelotaPong("bola_roja.png")
 
+#Modificar la posición de la pelota
+    pelota.mover()
+    
+        
 
 
 
