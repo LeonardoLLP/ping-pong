@@ -53,3 +53,10 @@ class PelotaPong:
         self.y = VENTANA_VERT / 2 - self.alto / 2
         self.dir_x = -self.dir_x
         self.dir_y = random.choice([-5, 5])
+
+#Empezamos con la raqueta
+class RaquetaPong:
+    def __init__(self):
+        self.imagen = pygame.image.load("raqueta.png").convert_alpha()
+
+        # --- Atributos de la Clase ---
