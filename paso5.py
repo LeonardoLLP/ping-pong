@@ -34,3 +34,10 @@ class RaquetaPong:
 #Definimos el movimiento de la raqueta
     def mover(self):
         self.y += self.dir_y
+
+#Creamos las raquetas
+raqueta_1 = RaquetaPong()
+raqueta_1.x = 60
+
+raqueta_2 = RaquetaPong()
+raqueta_2.x = VENTANA_HORI - 60 - raqueta_2.ancho
