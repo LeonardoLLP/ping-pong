@@ -21,6 +21,9 @@ class PelotaPong:
         self.dir_x = random.choice([-5, 5])
         self.dir_y = random.choice([-5, 5])
 
+    def mover(self):
+        self.x += self.dir_x
+        self.y += self.dir_y
 
 
 
