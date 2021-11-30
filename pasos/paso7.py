@@ -12,4 +12,4 @@ def golpear(self, pelota):
         pelota.x = self.x + self.ancho
 
 # Detectar el golpe de la pelota
-raquetas.raqueta_1.golpear(pelota)
+raquetas.raqueta_1.golpear(raquetas.pelota)
