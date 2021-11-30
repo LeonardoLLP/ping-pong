@@ -18,3 +18,8 @@ class RaquetaPong:
         
     def mover(self):
         self.y += self.dir_y
+
+#Para dibujar la imagen de la raqueta        
+    def __init__(self):
+        self.imagen = pygame.image.load("raqueta.png").convert_a
+        self.ancho, self.alto = self.imagen.get_size()
