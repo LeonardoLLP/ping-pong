@@ -89,3 +89,21 @@ def main():
 
     raqueta_2 = RaquetaPong()
     raqueta_2.x = VENTANA_HORI - 60 - raqueta_2.ancho
+
+    # Bucle principal
+    jugando = True
+    while jugando:
+        pelota.mover()
+        pelota.rebotar()
+
+        ventana.fill(BLANCO)
+        ventana.blit(pelota.imagen, (pelota.x, pelota.y))
+        ventana.blit(raqueta_1.imagen, (raqueta_1.x, raqueta_1.y))
+        ventana.blit(raqueta_2.imagen, (raqueta_2.x, raqueta_2.y))
+
+        for event in pygame.event.get():
+            if event.type == QUIT:
+                jugando = False
+
+        pygame.display.flip()
+        pygame.time.Clock().tick(FPS)
