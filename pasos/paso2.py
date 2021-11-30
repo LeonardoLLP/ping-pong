@@ -23,19 +23,11 @@ class PelotaPong:
         self.dir_x = random.choice([-5, 5])
         self.dir_y = random.choice([-5, 5])
 
+        # Puntuación de la pelota
+        self.puntuacion = 0
+        self.puntuacion_ia = 0
+
     def mover(self):
         self.x += self.dir_x
         self.y += self.dir_y
-
-#Creación de la pelota
-pelota = PelotaPong("bola_roja.png")
-
-#Modificar la posición de la pelota
-pelota.mover()
-
-#Dibujar la pelota en su posicion en la ventana
-variables.ventana.blit(pelota.imagen, (pelota.x, pelota.y))
-
-
-
 

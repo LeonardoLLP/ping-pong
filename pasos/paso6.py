@@ -1,6 +1,7 @@
 import variables
 import pygame
 import raquetas
+from pygame.locals import *
 
 # Método mover
 def mover(self):
@@ -18,13 +19,13 @@ def check_status(self):
         # Detecta que se ha pulsado una tecla
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_w:
-                raqueta_1.dir_y = -5
+                raquetas.raqueta_1.dir_y = -5
             if event.key == pygame.K_s:
-                raqueta_1.dir_y = 5
+                raquetas.raqueta_1.dir_y = 5
 
         # Detecta que se ha soltado la tecla
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_w:
-                raqueta_1.dir_y = 0
+                raquetas.raqueta_1.dir_y = 0
             if event.key == pygame.K_s:
-                raqueta_1.dir_y = 0
+                raquetas.raqueta_1.dir_y = 0
