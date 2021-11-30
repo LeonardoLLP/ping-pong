@@ -31,6 +31,8 @@ class PelotaPong:
 #Modificar la posición de la pelota
     pelota.mover()
     
+#Dibujar la pelota en su posicion en la ventana
+    ventana.blit(pelota.imagen, (pelota.x, pelota.y))
         
 
 
