@@ -34,7 +34,7 @@ El juego se ejecutará en una ventana independiente. Para crear la ventana, nece
 
 El siguiente programa genera una ventana en blanco con el título del juego, similar a la captura siguiente (la ventana está recortada en la captura).
 
-    '''Pygame - Pong 1
+    Pygame - Pong 1
 
     # pong_1_1.py: Ventana de juego
 
@@ -77,7 +77,7 @@ El siguiente programa genera una ventana en blanco con el título del juego, sim
 
 Cada una de las instrucciones tiene una función específica, que se comenta a continuación:
 
-    '''Importación de módulos
+    Importación de módulos
     import pygame
     from pygame.locals import *
     #Importamos los módulos pygame. Para que al hacer referencia en el programa a las constantes de pygame no tengamos que incluir el nombre del módulo, las            importamos todas del módulo pygame.locals.
@@ -97,7 +97,7 @@ Normalmente FPS hace referencia al número de veces por segundo que se actualiza
 En pygame los colores se indican mediante códigos RGB, así que definimos una constante con el nombre del color para facilitar su referencia.
 Inicialización
 
-    '''# Inicialización de Pygame
+    # Inicialización de Pygame
     pygame.init()
 
     # Inicialización de la superficie de dibujo (display surface)
@@ -109,7 +109,7 @@ Inicializamos pygame.
 Creamos el objeto ventana que nos permite acceder al contenido de la ventana (al crearlo, le indicamos su tamaño).
 Le damos un título a la ventana.
     
-    '''Bucle principal
+    Bucle principal
     # Bucle principal
     jugando = True
     while jugando:
@@ -143,7 +143,7 @@ El siguiente programa dibuja una pelota cuadrada de color rojo en el centro de l
 
 Para situar los objetos en la ventana pygame utiliza un sistema de coordenadas cartesianas en el que el origen se encuentran en la esquina superior izquierda de la ventana y en el que el eje vertical está dirigido hacia abajo. De esta manera, los valores de las coordenadas serán siempre positivos: cuanto mayor sea la coordenada x más a la derecha estará el objeto y cuanto mayor sea la coordenada y más hacia abajo estará el objeto. Si se asignan valores negativos o mayores que el tamaño de la ventana, no se produce ningún error, pero el objeto simplemente no se verá (dependiendo del tamaño que tenga y de los valores utilizados, el objeto puede verse parcialmente).
 
-    '''# pong_1_2.py: Clase PelotaPong
+    # pong_1_2.py: Clase PelotaPong
 
     import random
     import pygame
@@ -208,11 +208,11 @@ Para situar los objetos en la ventana pygame utiliza un sistema de coordenadas c
 
 
     if __name__ == "__main__":
-    main()'''
+    main()
 
 Las instrucciones añadidas con respecto al paso 1 son las siguientes:
 
-    '''#Importación de módulos
+    #Importación de módulos
         import random
     #Importamos el módulo random, que utilizaremos en el programa.
 
@@ -237,7 +237,7 @@ Las instrucciones añadidas con respecto al paso 1 son las siguientes:
 
     def mover(self):
         self.x += self.dir_x
-        self.y += self.dir_y'''
+        self.y += self.dir_y
 En la definición de una clase se definen los atributos y los métodos de la clase. Los atributos son variables que van asociadas automáticamente a los objetos. Los métodos son funciones que se pueden aplicar a los objetos. En la definición de la clase para hacer referencia a que los atributos son los del propio objeto se indica con self.
 
 El método __init__() es la función que se ejecuta automáticamente cuando se cree un objeto de la clase. Por eso, aprovechamos este método para definir los atributos de la clase. En el caso de la pelota de este juego, sus atributos serán: la imagen que se muestra en la pantalla, su tamaño, la posición en la pantalla y la dirección del movimiento:
@@ -252,41 +252,41 @@ Otros dos atributos serán el ancho y alto de la imagen, ancho y alto que se obt
         self.ancho, self.alto = self.imagen.get_size()
 Dos atributos más serán la posición horizontal y vertical de la imagen, x e y. Inicialmente, queremos que la pelota se dibuje en el centro de la pantalla. Para ello, tenemos que tener en cuenta que cuando indicamos la posición de un objeto, estamos indicando la posición de la esquina superior izquierda de su imagen. Si el objeto es muy pequeño, no se notará la diferencia, pero lo mejor es tener en cuenta el ancho y alto del objeto, restando la mitad del tamaño del objeto a la posición del centro de la ventana.
 
-    '''VENTANA_HORI / 2self.ancho / 2VENTANA_VERT / 2self.alto / 2
+    VENTANA_HORI / 2self.ancho / 2VENTANA_VERT / 2self.alto / 2
         self.x = VENTANA_HORI / 2 - self.ancho / 2
-        self.y = VENTANA_VERT / 2 - self.alto / 2'''
+        self.y = VENTANA_VERT / 2 - self.alto / 2
 Dos atributos más serán la dirección horizontal y vertical de movimiento de la imagen, dir_x y dir_y. Numéricamente, serán los píxeles que se desplazará la pelota cada vez que se redibuje la pantalla.Inicialmente, la pelota se desplazará 5px aleatoriamente hacia arriba (-5) o hacia abajo (5), hacia la izquierda (-5) o hacia la derecha (5):
 
-     '''self.dir_x = random.choice([-5, 5])
-       self.dir_y = random.choice([-5, 5])'''
+     self.dir_x = random.choice([-5, 5])
+     self.dir_y = random.choice([-5, 5])
        
 El método mover() es la función que define cómo se mueve la pelota. En este caso, simplemente añadimos a las posiciones los valores de las direcciones. Este método sólo se ejecutará cuando la llamemos en el cuerpo del programa.
 La imagen siguiente muestra tres posiciones sucesivas de la pelota. La pelota se desplaza cada vez dir_x unidades en horizontal y dir_y unidades en vertical.
 
-    ''' dir_ydir_x(2)dir_ydir_x
+        dir_ydir_x(2)dir_ydir_x
         def mover(self):  
         self.x += self.dir_x
-        self.y += self.dir_y'''
+        self.y += self.dir_y
         
 Creación de la pelota
 Una vez definida una clase, en el cuerpo del programa podemos crear objetos (es decir, variables) de esa clase. En este caso, creamos la variable pelota de la clase PelotaPong. Esta variable automáticamente tendrá los atributos definidos en la clase (imagen, tamaño, posición, dirección) y se le podrán aplicar los métodos definidos en la clase (mover()). Al crear la variable le debemos indicar el fichero de imagen a utilizar, en este caso una imagen png.
 
-    '''pelota = PelotaPong("bola_roja.png")'''
+    pelota = PelotaPong("bola_roja.png")
 Mover la pelota
 Para que la pelota se mueva y se dibuje en la pantalla, en el bucle principal del programa debemos:
 
 Llamar al método mover(), para que se modifique la posición de la pelota (es decir sus atributos x e y):
 
-    '''pelota.mover()'''
+    pelota.mover()
     
 Dibujar la pelota en su posición en la ventana. Para ello recurrimos al método bit() del objeto ventana, indicando la imagen que queremos dibujar y su posición en la ventana:  
 
-    ''' ventana.blit(pelota.imagen, (pelota.x, pelota.y))'''
+    ventana.blit(pelota.imagen, (pelota.x, pelota.y))
     
 Paso 3: Rebote de la pelota
 En este paso mejoraremos el comportamiento de la pelota haciendo que la pelota rebote al chocar con los cuatro lados de la ventana. Para ello, añadiremos un nuevo método a la clase (rebotar()) que utilizaremos en el bucle principal del programa.
 
-    '''# pong_1_3.py: Rebote de la pelota
+    # pong_1_3.py: Rebote de la pelota
 
     import random
     import pygame
